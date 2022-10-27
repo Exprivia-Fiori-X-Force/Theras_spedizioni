@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.5"
+metadata:
+  name: theras.fiori.spedizioni
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: Theras_Grisulli_CLONING
+          url: http://vhtftds4ci.sap.theras-group.com:44300
+        app:
+          name: ZTRACKING
+          description: Tracking spedizioni
+          package: z001
+          transport: DS4K900287
