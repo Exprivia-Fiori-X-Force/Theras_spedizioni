@@ -39,9 +39,20 @@
                             <PropertyValue Property="Value" Path="Vbeln_rif" />
                             <PropertyValue Property="Action" String="displayInWebGUI" />
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+							<!-- > 
+							<PropertyValue Property="Label" String="{i18n>deliveryReturn}"/>
+                            </!-->
                         </Record>
-
-                          
+                        <!-- >  INS DI 28.10.22 </!-->
+                        <Record Type="UI.DataFieldWithIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="SalesOrder"/>
+                            <PropertyValue Property="Value" Path="Ordine"/>
+                            <PropertyValue Property="Action" String="display"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+							<!-- > 
+                            <PropertyValue Property="Label" String="{i18n>order}"/>
+                            </!-->
+                        </Record>                          
                      </Collection>
                 </Annotation>
             </Annotations>

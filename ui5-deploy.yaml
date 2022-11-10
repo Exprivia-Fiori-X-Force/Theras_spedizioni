@@ -14,10 +14,10 @@ builder:
       afterTask: generateCachebusterInfo
       configuration:
         target:
-          destination: Theras_Grisulli_CLONING
+          destination: Theras_INCAMPO
           url: http://vhtftds4ci.sap.theras-group.com:44300
         app:
           name: ZTRACKING
           description: Tracking spedizioni
           package: z001
-          transport: DS4K900287
+          transport: DS4K900634
