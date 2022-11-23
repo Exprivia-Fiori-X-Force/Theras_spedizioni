@@ -11,7 +11,7 @@ sap.ui.define([],
                 oButton = this.getView().byId("LetteraVetturaButton");
                 oButton.setIcon("sap-icon://print");
                 oButton = this.getView().byId("GeneraButton");
-                oButton.setIcon("sap-icon://synchronize");
+                //oButton.setIcon("sap-icon://synchronize");
             },
             adaptNavigationParameterExtension: function (oSelectionVariant, oObjectInfo) {
 
@@ -206,6 +206,12 @@ sap.ui.define([],
                         value1: data.Awbnumber + '/' + data.Ordine + '/' + data.Ordine
                     });
                     aFilters.push(oFilter);
+                    var oFilterReturn = new sap.ui.model.Filter({
+                        path: "key",
+                        operator: sap.ui.model.FilterOperator.EQ,
+                        value1: data.Awb_ritorno + '/' + data.Ordine + '/' + data.Ordine
+                    });
+                    aFilters.push(oFilterReturn);
                 });
                 var oModel = this.getView().getModel();
                 oModel.read("/zsped_trackingSet", {
@@ -221,6 +227,7 @@ sap.ui.define([],
                             element.NavTrackingToEvent.results.forEach(el => {
                                 table.push({
                                     awbnumber: element.trackingNumber,
+                                    
                                     descr: el.Description,
                                     date: el.Date,
                                     time: el.Time
@@ -238,6 +245,8 @@ sap.ui.define([],
                                             text: "awbnumber"
                                         })
                                     }),
+                                   
+
                                     new sap.m.Column({
                                         header: new sap.m.Label({
                                             text: "Status"
@@ -262,6 +271,7 @@ sap.ui.define([],
                                             new sap.m.Label({
                                                 text: "{awbnumber}"
                                             }),
+                                           
                                             new sap.m.Label({
                                                 text: "{descr}"
                                             }),

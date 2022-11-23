@@ -32,7 +32,7 @@ server:
           - path: /sap
             url: http://vhtftds4ci.sap.theras-group.com:44300
             client: '050'
-            destination: Theras_INCAMPO
+            destination: Theras_Grisulli_CLONING
     - name: sap-fe-mockserver
       beforeMiddleware: csp
       configuration:

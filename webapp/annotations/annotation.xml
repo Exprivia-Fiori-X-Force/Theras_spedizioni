@@ -10,50 +10,75 @@
             <Annotations Target="ZSTATUS_SPED_SRV.ZSPED_HISTORY">
                 <Annotation Term="UI.LineItem">
                     <Collection>
-                    <Record Type="UI.DataField">                     
-                            <PropertyValue Property="Value" Path="Awbnumber"/>                          
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                    </Record>
-                     <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Stato Andata"/>
-                            <PropertyValue Property="Value" Path="StatoAndata"/>
-                            <PropertyValue Property="Criticality" Path="SemaforoAndata"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Stato Ritorno"/>
-                            <PropertyValue Property="Value" Path="StatoRitorno"/>
-                            <PropertyValue Property="Criticality" Path="SemaforoRitorno"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
                         <Record Type="UI.DataFieldWithIntentBasedNavigation">
                             <PropertyValue Property="SemanticObject" String="OutboundDelivery" />
                             <PropertyValue Property="Value" Path="Vbeln" />
                             <PropertyValue Property="Action" String="displayInWebGUI" />
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
-                        <Record Type="UI.DataFieldWithIntentBasedNavigation">
-                            <PropertyValue Property="SemanticObject" String="ReturnsDelivery" />
-                            <PropertyValue Property="Value" Path="Vbeln_rif" />
-                            <PropertyValue Property="Action" String="displayInWebGUI" />
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-							<!-- > 
-							<PropertyValue Property="Label" String="{i18n>deliveryReturn}"/>
-                            </!-->
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Awbnumber" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Awb_ritorno" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Stato Andata" />
+                            <PropertyValue Property="Value" Path="StatoAndata" />
+                            <PropertyValue Property="Criticality" Path="SemaforoAndata" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Stato Ritorno" />
+                            <PropertyValue Property="Value" Path="StatoRitorno" />
+                            <PropertyValue Property="Criticality" Path="SemaforoRitorno" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+
                         <!-- >  INS DI 28.10.22 </!-->
                         <Record Type="UI.DataFieldWithIntentBasedNavigation">
-                            <PropertyValue Property="SemanticObject" String="SalesOrder"/>
-                            <PropertyValue Property="Value" Path="Ordine"/>
-                            <PropertyValue Property="Action" String="display"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-							<!-- > 
+                            <PropertyValue Property="SemanticObject" String="SalesOrder" />
+                            <PropertyValue Property="Value" Path="Ordine" />
+                            <PropertyValue Property="Action" String="display" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                            <!-- > 
                             <PropertyValue Property="Label" String="{i18n>order}"/>
                             </!-->
-                        </Record>                          
-                     </Collection>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Data" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Countrycode" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Provincecode" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Addressline" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Cityname" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Email" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Phone" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                    </Collection>
                 </Annotation>
             </Annotations>
             <Annotations Target="ZSTATUS_SPED_SRV.ZSPED_HISTORY/SemaforoAndata">

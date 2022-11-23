@@ -98,10 +98,7 @@
                 "settings": {
                     "defaultBindingMode": "TwoWay",
                     "defaultCountMode": "Inline",
-                    "refreshAfterChange": false,
-                    "metadataUrlParams": {
-                        "sap-value-list": "none"
-                    }
+                    "refreshAfterChange": false
                 }
             },
             "@i18n": {
@@ -133,12 +130,7 @@
                                         "requiresSelection": true,
                                         "icon": "sap-icon://synchronize"
                                     },
-                                    "Rigenera": {
-                                        "id": "GeneraButton",
-                                        "text": "Genera",
-                                        "press": "Genera",
-                                        "requiresSelection": true
-                                    },
+                                    
                                     "LetteraVettura": {
                                         "id": "LetteraVetturaButton",
                                         "text": "Lettera Vett.",

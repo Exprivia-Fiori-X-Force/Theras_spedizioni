@@ -7,10 +7,10 @@
                 <Key>
                     <PropertyRef Name="key"/>
                 </Key>
-                <Property Name="trackingNumber" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="description" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="status" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="key" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="trackingNumber" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="description" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="status" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="key" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <NavigationProperty Name="NavTrackingToEvent" Relationship="ZSTATUS_SPED_SRV.TrackingToEvent" FromRole="FromRole_TrackingToEvent" ToRole="ToRole_TrackingToEvent"/>
             </EntityType>
             <EntityType Name="zsped_event" sap:content-version="1">
@@ -18,11 +18,11 @@
                     <PropertyRef Name="key"/>
                 </Key>
                 <Property Name="key" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Date" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Time" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="TypeCode" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Description" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="SignedBy" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Date" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Time" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TypeCode" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SignedBy" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <NavigationProperty Name="NavEventToService" Relationship="ZSTATUS_SPED_SRV.EventToService" FromRole="FromRole_EventToService" ToRole="ToRole_EventToService"/>
             </EntityType>
             <EntityType Name="zsped_service" sap:content-version="1">
@@ -30,18 +30,16 @@
                     <PropertyRef Name="key"/>
                 </Key>
                 <Property Name="key" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="code" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="description" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="code" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="description" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
             </EntityType>
             <EntityType Name="ZSPED_HISTORY" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="Vbeln"/>
-                    <PropertyRef Name="Vbeln_rif"/>
                     <PropertyRef Name="Awbnumber"/>
                 </Key>
                 <Property Name="SemaforoAndata" Type="Edm.Int32" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Vbeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Delivery" sap:creatable="false"/>
-                <Property Name="Vbeln_rif" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false"/>
                 <Property Name="Awbnumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="SemaforoRitorno" Type="Edm.Int32" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="StatoAndata" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
@@ -64,6 +62,7 @@
                 <Property Name="Width" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="Height" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="Ordine" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Awb_ritorno" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false"/>
             </EntityType>
             <EntityType Name="zsped_et_pdf" sap:content-version="1">
                 <Key>
@@ -72,7 +71,7 @@
                 </Key>
                 <Property Name="Awbnumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Vbeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Delivery" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Content" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Content" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
             </EntityType>
             <Association Name="TrackingToEvent" sap:content-version="1">
                 <End Type="ZSTATUS_SPED_SRV.zsped_tracking" Multiplicity="*" Role="FromRole_TrackingToEvent"/>
