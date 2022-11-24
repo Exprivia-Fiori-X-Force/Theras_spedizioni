@@ -206,12 +206,14 @@ sap.ui.define([],
                         value1: data.Awbnumber + '/' + data.Ordine + '/' + data.Ordine
                     });
                     aFilters.push(oFilter);
+                    if (data.Awb_ritorno){
                     var oFilterReturn = new sap.ui.model.Filter({
                         path: "key",
                         operator: sap.ui.model.FilterOperator.EQ,
                         value1: data.Awb_ritorno + '/' + data.Ordine + '/' + data.Ordine
                     });
                     aFilters.push(oFilterReturn);
+                }
                 });
                 var oModel = this.getView().getModel();
                 oModel.read("/zsped_trackingSet", {
